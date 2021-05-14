@@ -31,6 +31,7 @@
             <th>Full Name</th>
             <th>Email</th>
             <th>Created At</th>
+            <th>Actions</th>
         </tr>
         {%for names in users%}
         <tr>
@@ -38,6 +39,7 @@
             <td>{{names["first_name"]}} {{names["last_name"]}}</td>
             <td>{{names["email"]}}</td>
             <td>{{names["created_at"]}}</td>
+            <td><a href="/{{names['id']}}">Show</a> | <a href="/{{names['id']}}/edit">Edit</a> | <a href="/{{names['id']}}/delete">Delete</a></td>
         </tr>
         {%endfor%}
     </table>
